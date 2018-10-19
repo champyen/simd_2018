@@ -1,0 +1,23 @@
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_CFLAGS := -DCL_TARGET_OPENCL_VERSION=120
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include/
+LOCAL_MODULE := libOpenCL
+LOCAL_SRC_FILES := \
+	src/cl_stub.c 
+LOCAL_LDLIBS := -llog 
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_CFLAGS := -DCL_TARGET_OPENCL_VERSION=120
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include/
+LOCAL_MODULE := cl_mm
+LOCAL_SRC_FILES := \
+	src/cltk.c \
+	mm/cl_mm.c 
+
+LOCAL_SHARED_LIBRARIES += libOpenCL
+LOCAL_LDLIBS := -llog
+
+include $(BUILD_EXECUTABLE)
