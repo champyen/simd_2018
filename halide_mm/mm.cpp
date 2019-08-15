@@ -23,12 +23,12 @@ int main(void)
 
 	for(int y = 0; y < TEST_M; y++){
 		for(int x = 0; x < TEST_K; x++){
-			ma[y*TEST_K + x] = (float)(rand()%256/256.0);
+			ma[y*TEST_K + x] = (float)(rand()%256)/256.0;
 		}
 	}
 	for(int y = 0; y < TEST_K; y++){
 		for(int x = 0; x < TEST_N; x++){
-			mb[y*TEST_N + x] = (float)(rand()%256/256.0);
+			mb[y*TEST_N + x] = (float)(rand()%256)/256.0;
 		}
 	}
 	for(int y = 0; y < TEST_M; y++){

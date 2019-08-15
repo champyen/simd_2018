@@ -19,11 +19,11 @@ public:
 
     void schedule(){
         if(auto_schedule){
-            // 1. Buffer : buf.dim(N).set_bounds_estimate(MIN, EXTENT)
+            // 1. Buffer : buf.dim(N).set_estimate(MIN, EXTENT)
 
             // 2. parameters : parm.set_estimate(VALUE)
 
-            // 3. Func : func.estimate(Var, MIN, EXTENT);
+            // 3. Func : func.set_estimate(Var, MIN, EXTENT);
         }
         else{
         }
